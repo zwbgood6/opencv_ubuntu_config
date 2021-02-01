@@ -2,15 +2,17 @@
 
 ## step 1: update the ubuntu system package
 
-`sudo apt-get update && sudo apt-get upgrade`
+```
+sudo apt-get update && sudo apt-get upgrade
+```
 
 ## step 2: Install Required tools and packages
 
+if you cannot install some packages below, you may delete them in the command line and install again.
+
 ```
 sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-
 sudo apt-get install python3.5-dev python3-numpy libtbb2 libtbb-dev
-
 sudo apt-get install libjpeg-dev libpng-dev libtiff5-dev libjasper-dev libdc1394-22-dev libeigen3-dev libtheora-dev libvorbis-dev libxvidcore-dev libx264-dev sphinx-common libtbb-dev yasm libfaac-dev libopencore-amrnb-dev libopencore-amrwb-dev libopenexr-dev libgstreamer-plugins-base1.0-dev libavutil-dev libavfilter-dev libavresample-dev
 ```
 
@@ -39,7 +41,9 @@ cd ~
 
 ## step 5: check opencv version installed
 
-`pkg-config --modversion opencv`
+```
+pkg-config --modversion opencv
+```
 
 ## step 6: compile and run a test program
 
@@ -56,4 +60,14 @@ gedit test.cpp
 ```
 g++ test.cpp -o testoutput -std=c++11 `pkg-config --cflags --libs opencv`
 ./testoutput
+```
+
+# trouble shooting
+
+## error 1: cannot find <opencv/opencv.hpp>
+
+If you install opencv on Ubuntu 20.04, go to `/usr/local/lib/pkgconfig/` and you can find `opencv4.pc`. Then you apply
+
+```
+sudo cp opencv4.pc opencv.pc
 ```
