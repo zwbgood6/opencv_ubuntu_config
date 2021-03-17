@@ -1,6 +1,10 @@
 # OpenCV Ubuntu Configuration (VS Code)
 
-## step 0: method 1, follow the guidelines in https://learnopencv.com/install-opencv-4-on-ubuntu-18-04/
+## method 1
+
+## step 1: follow the guidelines in https://learnopencv.com/install-opencv-4-on-ubuntu-18-04/
+
+## method 2
 
 ## step 1: update the ubuntu system package
 
